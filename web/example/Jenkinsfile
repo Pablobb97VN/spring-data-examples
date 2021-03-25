@@ -7,6 +7,11 @@ pipeline{
 					sh "mvn clean compile test"
 				}
 			}
+			stage('saludo'){
+				steps{
+					sh "mvn clean compile test"
+				}
+			}
 			
 		}
 }
