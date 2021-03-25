@@ -4,12 +4,12 @@ pipeline{
 		stages{
 			stage('test'){
 				steps{
-					sh "mvn clean compile test"
+					bat "mvn clean compile test"
 				}
 			}
 			stage('saludo'){
 				steps{
-					sh "mvn clean compile test"
+					echo "hola"
 				}
 			}
 			
