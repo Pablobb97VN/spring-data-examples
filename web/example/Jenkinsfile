@@ -21,7 +21,7 @@ pipeline{
 									groupId: pom.groupId,
 									version: pom.version,
 									repository: 'ProyectoPractica2',
-									creadentialsId: 'nexuscredentiales',
+									credentialsId: 'nexuscredentiales',
 									artifacts: [
 										[artifactId: pom.artifactId,
 										classifier: '',
