@@ -4,9 +4,19 @@ pipeline{
 		stages{
 			stage('test'){
 				steps{
-					bat "mvn clean compile test"
+					echo "mvn clean compile test"
 				}
 			}
+
+			stage('build application'){
+				steps{
+					dir("build_java"){
+						sh "mvn -f pom.xml clean install -Dmaven.test.skip-true"
+						sh "tree"
+					}
+				}
+			}
+
 			stage('nexus'){
 				steps{
 					script{
