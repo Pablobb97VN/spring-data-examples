@@ -10,7 +10,7 @@ pipeline{
 
 			stage('build application'){
 				steps{
-					dir("build_java"){
+					dir(""){
 						bat "mvn -f pom.xml clean install -Dmaven.test.skip-true"
 						bat "tree"
 					}
