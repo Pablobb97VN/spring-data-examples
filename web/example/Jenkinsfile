@@ -12,7 +12,7 @@ pipeline{
 				steps{
 					dir(""){
 						echo "mvn -f pom.xml clean install -Dmaven.test.skip-true"
-						echo "tree"
+						bat "tree"
 					}
 				}
 			}
@@ -21,9 +21,7 @@ pipeline{
 				steps{
 					script{
 						dir(""){
-							echo "paso 1"
 							def pom = readMavenPom file: "pom.xml";
-							echo "paso2"
 						
 							dir("target"){
 								nexusArtifactUploader(
