@@ -21,7 +21,9 @@ pipeline{
 				steps{
 					script{
 						dir(""){
+							echo "paso 1"
 							def pom = readMavenPom file: "pom.xml";
+							echo "paso2"
 						
 							dir("target"){
 								nexusArtifactUploader(
