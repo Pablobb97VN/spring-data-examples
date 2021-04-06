@@ -10,7 +10,7 @@ pipeline{
 
 			stage('build application'){
 				steps{
-					dir(".."){
+					dir("."){
 						bat "mvn -f pom.xml clean install -Dmaven.test.skip-true"
 						bat "tree"
 					}
@@ -20,7 +20,7 @@ pipeline{
 			stage('nexus'){
 				steps{
 					script{
-						dir(".."){
+						dir("."){
 							def pom = readMavenPom file: "pom.xml";
 						
 							dir("target"){
@@ -35,7 +35,7 @@ pipeline{
 									artifacts: [
 										[artifactId: pom.artifactId,
 										classifier: '',
-										file: '',
+										file: 'spring-data-web-example-2.0.0.BUILD-SNAPSHOT.jar',
 										type: pom.packaging]
 									]
 								)
