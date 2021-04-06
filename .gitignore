@@ -2,7 +2,7 @@
 .classpath
 .springBeans
 .settings/
-target/
+#target/
 
 #IntelliJ Stuff
 .idea
