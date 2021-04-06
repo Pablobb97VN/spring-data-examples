@@ -35,7 +35,7 @@ pipeline{
 									artifacts: [
 										[artifactId: pom.artifactId,
 										classifier: '',
-										file: 'spring-data-web-example-2.0.0.BUILD-SNAPSHOT.jar',
+										file: '',
 										type: pom.packaging]
 									]
 								)
