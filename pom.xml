@@ -298,6 +298,17 @@
 			<id>spring-libs-snapshot</id>
 			<url>https://repo.spring.io/libs-snapshot</url>
 		</repository>
+		<repository>
+            		<id>nexus</id>
+            		<name>Nexus Repository</name>
+            		<url>http://localhost:8081/repository/maven-public/</url>
+            		<snapshots>
+                		<enabled>true</enabled>
+            		</snapshots>
+            		<releases>
+                		<enabled>true</enabled>
+            		</releases>
+        	</repository>
 	</repositories>
 
 	<pluginRepositories>
