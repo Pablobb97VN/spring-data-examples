@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: example.users.UserRepositoryIntegrationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.317 s - in example.users.UserRepositoryIntegrationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.313 s - in example.users.UserRepositoryIntegrationTests
