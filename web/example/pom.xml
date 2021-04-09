@@ -12,27 +12,49 @@
 		<version>2.0.0.BUILD-SNAPSHOT</version>
 	</parent>
 
+
+<servers>
+    
+   <server>
+       <id>nexus-releases</id>
+       <username>admin</username>
+       <password>admin123</password>
+   </server>
+   <server>
+       <id>nexus-snapshots</id>
+       <username>admin</username>
+       <password>admin123</password>
+   </server>
+<server>
+	  <id>nexus-public</id>
+	  <username>admin</username>
+	  <password>admin123</password>
+	</server>
+
+  </servers>
+
+
 	<distributionManagement>
     		<snapshotRepository>
-        		<id>my-snapshots</id>
-        		<name>my-snapshots</name>
-        		<url>http://localhost:8081/nexus/content/repositories/maven-snapshots/</url>
+        		<id>maven-snapshots</id>
+        		<name>maven-snapshots</name>
+        		<url>http://localhost:8081/repository/maven-snapshots/</url>
         		<layout>default</layout>
     		</snapshotRepository>
 	</distributionManagement>
 
 	<repositories>
     		<repository>
-        		<id>my-releases</id>
-        		<name>my-releases</name>
-        		<url>http://localhost:8081/nexus/content/repositories/maven-releases/</url>
+        		<id>maven-releases</id>
+        		<name>maven-releases</name>
+        		<url>http://localhost:8081/repository/maven-releases/</url>
         		<layout>default</layout>
     		</repository>
 
         	<repository>
-            		<id>nexus</id>
-            		<name>Nexus Repository</name>
-            		<url>http://localhost:8081/repository/maven-public/</url>
+            		<id>ProyectoPractica2</id>
+            		<name>ProyectoPractica2</name>
+            		<url>http://localhost:8081/repository/ProyectoPractica2/</url>
             		<snapshots>
                 		<enabled>true</enabled>
             		</snapshots>
@@ -41,7 +63,6 @@
             		</releases>
         	</repository>
     	</repositories>
-
 
 	<pluginRepositories>
         	<pluginRepository>
