@@ -12,35 +12,35 @@
 		<version>2.0.0.BUILD-SNAPSHOT</version>
 	</parent>
 
+	<distributionManagement>
+    		<snapshotRepository>
+        		<id>my-snapshots</id>
+        		<name>my-snapshots</name>
+        		<url>http://localhost:8081/nexus/content/repositories/maven-snapshots/</url>
+        		<layout>default</layout>
+    		</snapshotRepository>
+	</distributionManagement>
 
-<distributionManagement>
-    <snapshotRepository>
-        <id>my-snapshots</id>
-        <name>my-snapshots</name>
-        <url>http://localhost:8081/nexus/content/repositories/maven-snapshots/</url>
-        <layout>default</layout>
-    </snapshotRepository>
-</distributionManagement>
+	<repositories>
+    		<repository>
+        		<id>my-releases</id>
+        		<name>my-releases</name>
+        		<url>http://localhost:8081/nexus/content/repositories/maven-releases/</url>
+        		<layout>default</layout>
+    		</repository>
 
-<repositories>
-    <repository>
-        <id>my-releases</id>
-        <name>my-releases</name>
-        <url>http://localhost:8081/nexus/content/repositories/maven-releases/</url>
-        <layout>default</layout>
-    </repository>
-        <repository>
-            <id>nexus</id>
-            <name>Nexus Repository</name>
-            <url>http://localhost:8081/repository/maven-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
+        	<repository>
+            		<id>nexus</id>
+            		<name>Nexus Repository</name>
+            		<url>http://localhost:8081/repository/maven-public/</url>
+            		<snapshots>
+                		<enabled>true</enabled>
+            		</snapshots>
+            		<releases>
+                		<enabled>true</enabled>
+            		</releases>
+        	</repository>
+    	</repositories>
 
 
 	<pluginRepositories>
