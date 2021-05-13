@@ -1,0 +1,5 @@
+FROM java:8
+WORKDIR /
+ADD spring-data-web-example-2.0.0.BUILD-SNAPSHOT.jar spring-data-web-example-2.0.0.BUILD-SNAPSHOT.jar
+EXPOSE 8080
+CMD java - jar spring-data-web-example-2.0.0.BUILD-SNAPSHOT.jar

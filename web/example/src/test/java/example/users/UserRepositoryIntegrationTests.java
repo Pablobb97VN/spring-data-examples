@@ -34,6 +34,7 @@ public class UserRepositoryIntegrationTests extends AbstractIntegrationTests {
 	 * @see #65
 	 */
 	@Test
+        @SuppressWarnings("ThrowableResultIgnored")
 	public void repositoryRejectsUnencryptedPassword() {
 		Assertions.assertThrows(InvalidDataAccessApiUsageException.class, () -> {
 			users.save(new User(new Username("olivergierke"), Password.raw("foobar")));

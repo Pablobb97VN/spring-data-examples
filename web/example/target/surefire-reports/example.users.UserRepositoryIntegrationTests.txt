@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: example.users.UserRepositoryIntegrationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.27 s - in example.users.UserRepositoryIntegrationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.036 s <<< FAILURE! - in example.users.UserRepositoryIntegrationTests
+repositoryRejectsUnencryptedPassword  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.AbstractMethodError: Receiver class ch.qos.logback.classic.pattern.EnsureExceptionHandling does not define or inherit an implementation of the resolved method 'abstract void process(ch.qos.logback.core.Context, ch.qos.logback.core.pattern.Converter)' of interface ch.qos.logback.core.pattern.PostCompileProcessor.
+

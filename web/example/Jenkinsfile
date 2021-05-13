@@ -4,15 +4,15 @@ pipeline{
 		stages{
 			stage('test'){
 				steps{
-					echo "mvn clean compile test"
+					bat "mvn clean compile test"
 				}
 			}
 
 			stage('build application'){
 				steps{
 					dir("."){
-						echo "mvn -f pom.xml clean install -Dmaven.test.skip-true"
-						echo "tree"
+						bat "mvn -f pom.xml clean install -Dmaven.test.skip-true"
+						bat "tree"
 					}
 				}
 			}
@@ -44,6 +44,10 @@ pipeline{
 					}
 				}
 			}
+
+			#stage('docker'){
+			#	steps
+			#}
 			
 		}
 }
