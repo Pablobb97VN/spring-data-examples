@@ -45,9 +45,9 @@ pipeline{
 				}
 			}
 
-			#stage('docker'){
-			#	steps
-			#}
+			//stage('docker'){
+			//	steps
+			//}
 			
 		}
 }
